@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calc {
+    display: flex;
+    border: solid black 5px;
+    width: 400px;
+    height: 600px;
+    flex-direction: column-reverse;
+}
+
+.calc > div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.calc > div > * {
+    flex-grow: 1;
+    width: 100px;
+    height: 100px;
+}
+
+#zero {
+    flex-grow: 2;
+}
