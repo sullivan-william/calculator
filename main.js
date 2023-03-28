@@ -38,28 +38,28 @@ equal.addEventListener('click', (e) => {
             result.textContent = answer
             x = answer
             y = ''
-            operand = null
+            operator = null
             break;
         case '-':
             sub(x, y)
             result.textContent = answer
             x = answer
             y = ''
-            operand = null
+            operator = null
             break;
         case 'x':
             mult(x, y)
             result.textContent = answer
             x = answer
             y = ''
-            operand = null
+            operator = null
             break;
         case '/':
             divide(x, y)
             result.textContent = answer
             x = answer
             y = ''
-            operand = null
+            operator = null
             break;
     }
 });
