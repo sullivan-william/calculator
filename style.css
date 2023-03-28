@@ -36,3 +36,10 @@ body {
 .row5 {
     border-top: solid black 5px;
 }
+
+#display {
+    text-align: end;
+    padding-right: 20px;
+    font-size: xx-large;
+    max-height: 100px;
+}
