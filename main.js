@@ -36,18 +36,30 @@ equal.addEventListener('click', (e) => {
         case '+':
             add(x, y)
             result.textContent = answer
+            x = answer
+            y = ''
+            operand = null
             break;
         case '-':
             sub(x, y)
             result.textContent = answer
+            x = answer
+            y = ''
+            operand = null
             break;
         case 'x':
             mult(x, y)
             result.textContent = answer
+            x = answer
+            y = ''
+            operand = null
             break;
         case '/':
             divide(x, y)
             result.textContent = answer
+            x = answer
+            y = ''
+            operand = null
             break;
     }
 });
