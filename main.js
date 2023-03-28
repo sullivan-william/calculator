@@ -25,7 +25,8 @@ operands.map(operand => {
 operators.map(button => {
     button.addEventListener('click', (e) => {
         operator = e.target.textContent
-    })
+        y = '' // resets y if one operation has already occurred
+    }) 
 });
 
 equal.addEventListener('click', (e) => {
@@ -37,29 +38,21 @@ equal.addEventListener('click', (e) => {
             add(x, y)
             result.textContent = answer
             x = answer
-            y = ''
-            operator = null
             break;
         case '-':
             sub(x, y)
             result.textContent = answer
             x = answer
-            y = ''
-            operator = null
             break;
         case 'x':
             mult(x, y)
             result.textContent = answer
             x = answer
-            y = ''
-            operator = null
             break;
         case '/':
             divide(x, y)
             result.textContent = answer
             x = answer
-            y = ''
-            operator = null
             break;
     }
 });
@@ -69,8 +62,8 @@ clear.addEventListener('click', () => {
     operator = null
     y = ''
     answer = 0
-    result.textContent = answer
-})
+    result.textContent = ''
+});
 
 function add(x, y) {
     return answer = x + y
