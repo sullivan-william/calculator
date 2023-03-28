@@ -1,7 +1,8 @@
 const operands = Array.from(document.querySelectorAll('.operand'));
-const operators = Array.from(document.querySelectorAll('.operator'))
+const operators = Array.from(document.querySelectorAll('.operator'));
 const result = document.querySelector('.result');
-const equal = document.querySelector('#equal')
+const equal = document.querySelector('#equal');
+const clear = document.querySelector('#clear');
 
 let x = ''; // first operand
 let operator;
@@ -50,6 +51,14 @@ equal.addEventListener('click', (e) => {
             break;
     }
 });
+
+clear.addEventListener('click', () => {
+    x = ''
+    operator = null
+    y = ''
+    answer = 0
+    result.textContent = answer
+})
 
 function add(x, y) {
     return answer = x + y
