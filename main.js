@@ -25,10 +25,44 @@ operators.map(button => {
     button.addEventListener('click', (e) => {
         operator = e.target.textContent
     })
-})
+});
 
 equal.addEventListener('click', (e) => {
     x = Number(x)
     y = Number(y)
-    console.log(`${x} ${operator} ${y}`)
-})
+    
+    switch (operator) {
+        case '+':
+            add(x, y)
+            result.textContent = answer
+            break;
+        case '-':
+            sub(x, y)
+            result.textContent = answer
+            break;
+        case 'x':
+            mult(x, y)
+            result.textContent = answer
+            break;
+        case '/':
+            divide(x, y)
+            result.textContent = answer
+            break;
+    }
+});
+
+function add(x, y) {
+    return answer = x + y
+};
+
+function sub(x, y) {
+    return answer = x - y
+};
+
+function mult(x, y) {
+    return answer = x * y
+};
+
+function divide(x, y) {
+    return answer = x / y
+};
