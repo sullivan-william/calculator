@@ -1,10 +1,7 @@
 const operands = Array.from(document.querySelectorAll('.operand'));
 const operators = Array.from(document.querySelectorAll('.operator'))
 const result = document.querySelector('.result');
-// const addBtn = document.querySelector('#add');
-// const subBtn = document.querySelector('#sub');
-// const multBtn = document.querySelector('#multiply');
-// const divideBtn = document.querySelector('#divide');
+const equal = document.querySelector('#equal')
 
 let x = ''; // first operand
 let operator;
@@ -20,7 +17,6 @@ operands.map(operand => {
         } else { // if there is an operator and a first operand(x) selected move on to second operand(y)
             y += e.target.textContent
             result.textContent = y
-            console.log(`${x} ${operator} ${y}`)
         }
     })
 });
@@ -31,18 +27,8 @@ operators.map(button => {
     })
 })
 
-// addBtn.addEventListener('click', (e) => {
-//     operator = e.target.textContent
-// });
-
-// subBtn.addEventListener('click', (e) => {
-//     operator = e.target.textContent
-// });
-
-// multBtn.addEventListener('click', (e) => {
-//     operator = e.target.textContent
-// });
-
-// divideBtn.addEventListener('click', (e) => {
-//     operator = e.target.textContent
-// });
+equal.addEventListener('click', (e) => {
+    x = Number(x)
+    y = Number(y)
+    console.log(`${x} ${operator} ${y}`)
+})
