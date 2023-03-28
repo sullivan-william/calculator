@@ -21,10 +21,18 @@ body {
 
 .calc > div > * {
     flex-grow: 1;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 }
 
 #zero {
     flex-grow: 2;
+}
+
+.operator {
+    background-color: orange;
+}
+
+.row5 {
+    border-top: solid black 5px;
 }
