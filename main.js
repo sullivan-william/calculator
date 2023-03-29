@@ -60,28 +60,28 @@ equal.addEventListener('click', (e) => {
 
         switch (operator) {
             case '+':
-                add(x, y)
+                round(add(x, y))
                 result.textContent = answer
                 x = answer
                 selectedOperator = null
                 highlightSelectedOperator()
                 break;
             case '-':
-                sub(x, y)
+                round(sub(x, y))
                 result.textContent = answer
                 x = answer
                 selectedOperator = null
                 highlightSelectedOperator()
                 break;
             case 'x':
-                mult(x, y)
+                round(mult(x, y))
                 result.textContent = answer
                 x = answer
                 selectedOperator = null
                 highlightSelectedOperator()
                 break;
             case '/':
-                divide(x, y)
+                round(divide(x, y))
                 result.textContent = answer
                 x = answer
                 selectedOperator = null
@@ -128,7 +128,7 @@ percentage.addEventListener('click', () => {
         y = answer
         result.textContent = y
     }
-})
+});
 
 function add(x, y) {
     return answer = x + y
@@ -144,4 +144,8 @@ function mult(x, y) {
 
 function divide(x, y) {
     return answer = x / y
+};
+
+function round(num) {
+    return answer = Math.round(num * 100) / 100
 };
