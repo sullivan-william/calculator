@@ -4,6 +4,7 @@ const result = document.querySelector('.result');
 const equal = document.querySelector('#equal');
 const clear = document.querySelector('#clear');
 const posToNeg = document.querySelector('#pos-neg');
+const percentage = document.querySelector('#percentage');
 
 let x = ''; // first operand
 let operator;
@@ -105,21 +106,29 @@ posToNeg.addEventListener('click', (e) => {
     if (!selectedOperator && x[0] === '-') {
         x = x.slice(1)
         result.textContent = x
-        console.log('1')
     } else if (!selectedOperator && x[0] !== '-') {
         x = '-' + x
         result.textContent = x
-        console.log('2')
     } else if (selectedOperator && y[0] === '-') {
         y = y.slice(1)
         result.textContent = y
-        console.log('3')
     } else if (selectedOperator && y[0] !== '-') {
         y = '-' + y
         result.textContent = y
-        console.log('4')
     }
 });
+
+percentage.addEventListener('click', () => {
+    num = Number(result.textContent)
+    answer = num / 100
+    if (result.textContent === x) {
+        x = answer
+        result.textContent = x
+    } else {
+        y = answer
+        result.textContent = y
+    }
+})
 
 function add(x, y) {
     return answer = x + y
